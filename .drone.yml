@@ -11,6 +11,8 @@ steps:
     when:
       branch:
         - unitest
+      event:
+        - pull_request
  
   - name:  pruebas-linter
     image: node:12.6.0
@@ -20,6 +22,8 @@ steps:
     when:
       branch:
         - unitest
+      event:
+        - pull_request
 
   - name: nodejs-test
     image: node:12.6.0
